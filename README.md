@@ -37,6 +37,18 @@ python manage.py migrate
 * **Получение токена авторизации**
     ### Request
     ```
+      POST /api/v1/token/
+      form-data: {"username": "username_string", "password": "password_string"}
+    ```
+    ### Response
+        {
+          "refresh": "JRW-refresh-token",
+          "access": "JRW-access-token",
+        }
+
+  * **Обновление токена**
+    ### Request
+    ```
       POST /api/v1/token/?username={username_string}&password={password_string}
     ```
     ### Response
@@ -44,7 +56,6 @@ python manage.py migrate
           "access": "JRW-access-token",
           "refresh": "JRW-refresh-token"
         }
-  
   
   
   
