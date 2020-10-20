@@ -55,7 +55,7 @@ python manage.py migrate
     ```
     ### Response
         {
-          "access": "new-JRW-access-token"
+          "access": "<new-JRW-access-token>"
         }
 
 * **Получение списка всех постов**
