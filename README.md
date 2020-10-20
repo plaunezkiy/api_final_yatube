@@ -43,8 +43,8 @@ python manage.py migrate
     ```
     ### Response
         {
-          "refresh": "JRW-refresh-token",
-          "access": "JRW-access-token",
+          "refresh": "<JRW-refresh-token>",
+          "access": "<JRW-access-token>",
         }
 
 * **Обновление токена**
