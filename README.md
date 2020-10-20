@@ -65,6 +65,7 @@ python manage.py migrate
       headers: {"Authorization": "Bearer <JRW-access-token>"}
     ```
     ### Response
+        status_code: 200
         [
             {
                 "id": 0,
