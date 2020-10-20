@@ -33,3 +33,17 @@ python manage.py migrate
 ```python manage.py runserver```
 
 # Примеры использования
+
+* Получение токена авторизации
+  POST: localhost:8000/token {"username": "username_string", "password": "password_string"}
+  Response:
+    {
+      "access": "<JRW-access-token>",
+      "refresh": "<JRW-refresh-token>"
+    }
+  
+  
+  
+  
+  
+  
