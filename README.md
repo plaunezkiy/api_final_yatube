@@ -40,8 +40,8 @@ python manage.py migrate
   
   Response:
     {
-      "access": "<JRW-access-token>",
-      "refresh": "<JRW-refresh-token>"
+      "access": "JRW-access-token",
+      "refresh": "JRW-refresh-token"
     }
   
   
