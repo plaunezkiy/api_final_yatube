@@ -18,7 +18,8 @@ windows консоль:
 
 3. Установить зависимости и сделать миграции
 
-```python pip install -r requirements.txt
+```
+python pip install -r requirements.txt
 python manage.py makemigrations
 python manage.py migrate
 ```
