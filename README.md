@@ -34,7 +34,7 @@ python manage.py migrate
 
 # Примеры использования
 
-* Получение токена авторизации
+* **Получение токена авторизации**
     ## Request
     ```
       POST /api/v1/token/?username={username_string}&password={password_string}
