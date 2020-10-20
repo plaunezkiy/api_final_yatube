@@ -62,7 +62,7 @@ python manage.py migrate
     ### Request
     ```
       GET /api/v1/posts/
-      headers: {"Authorization": "Bearer JRW-access-token"}
+      headers: {"Authorization": "Bearer <JRW-access-token>"}
     ```
     ### Response
         [
