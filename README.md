@@ -39,7 +39,7 @@ python manage.py migrate
     ```
       POST /api/v1/token/?username={username_string}&password={password_string}
     ```
-    ## Response
+    ### Response
         {
           "access": "JRW-access-token",
           "refresh": "JRW-refresh-token"
