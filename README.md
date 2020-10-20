@@ -35,15 +35,15 @@ python manage.py migrate
 # Примеры использования
 
 * Получение токена авторизации
-## Request
-```
-  POST /api/v1/token/?username={username_string}&password={password_string}
-```
-## Response
-    {
-      "access": "JRW-access-token",
-      "refresh": "JRW-refresh-token"
-    }
+    ## Request
+    ```
+      POST /api/v1/token/?username={username_string}&password={password_string}
+    ```
+    ## Response
+        {
+          "access": "JRW-access-token",
+          "refresh": "JRW-refresh-token"
+        }
   
   
   
