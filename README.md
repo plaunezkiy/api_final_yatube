@@ -47,17 +47,12 @@ python manage.py migrate
         }
 
 * **Обновление токена**
-### Request
-```
-  POST /api/v1/token/refresh/
-  form-data: {"refresh": "JRW-refresh-token"}
-```
-### Response
-    {
-      "access": "new-JRW-access-token"
-    }
-  
-  
-  
-  
-  
+    ### Request
+    ```
+      POST /api/v1/token/refresh/
+      form-data: {"refresh": "JRW-refresh-token"}
+    ```
+    ### Response
+        {
+          "access": "new-JRW-access-token"
+        }
