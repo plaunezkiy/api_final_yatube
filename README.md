@@ -57,3 +57,20 @@ python manage.py migrate
         {
           "access": "new-JRW-access-token"
         }
+
+* **Получение списка всех постов**
+    ### Request
+    ```
+      GET /api/v1/posts/
+      headers: {"Authorization": "Bearer JRW-access-token"}
+    ```
+    ### Response
+        [
+            {
+                "id": 0,
+                "text": "string",
+                "author": "string",
+                "pub_date": "2019-08-24T14:15:22Z"
+            },
+            ...
+        ]
