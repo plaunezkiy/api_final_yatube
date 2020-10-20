@@ -35,7 +35,7 @@ python manage.py migrate
 
 # Примеры использования
 
-* ##Получение токена авторизации
+* **Получение токена авторизации**
     ### Request
     ```
         POST /api/v1/token/
@@ -47,7 +47,7 @@ python manage.py migrate
           "access": "<JRW-access-token>",
         }
 
-* ##Обновление токена
+* **Обновление токена**
     ### Request
     ```
         POST /api/v1/token/refresh/
@@ -58,7 +58,7 @@ python manage.py migrate
           "access": "<new-JRW-access-token>"
         }
 
-* ##Получение списка всех постов
+* **Получение списка всех постов**
     ### Request
     ```
         GET /api/v1/posts/
@@ -76,7 +76,7 @@ python manage.py migrate
             ...
         ]
 
-* ##Создание нового поста
+* **Создание нового поста**
     ### Request
     ```
         POST /api/v1/posts/
@@ -92,7 +92,7 @@ python manage.py migrate
             "pub_date": "2019-08-24T14:15:22Z"
         }
 
-* ##Получение поста по его id
+* **Получение поста по его id**
     #### Request
     ```
         GET /api/v1/posts/{post_id}/
@@ -107,7 +107,7 @@ python manage.py migrate
             "pub_date": "2019-08-24T14:15:22Z"
         }
 
-* ##Обновление поста по его id
+* **Обновление поста по его id**
     #### Request
     ```
         PUT /api/v1/posts/{post_id}/
@@ -123,7 +123,7 @@ python manage.py migrate
             "pub_date": "2019-08-24T14:15:22Z"
         }
 
-* ##Частичное обновление поста по его id
+* **Частичное обновление поста по его id**
     #### Request
     ```
         PATCH /api/v1/posts/{post_id}/
@@ -139,7 +139,7 @@ python manage.py migrate
             "pub_date": "2019-08-24T14:15:22Z"
         }
         
-* ##Удаление поста по его id
+* **Удаление поста по его id**
     #### Request
     ```
         DELETE /api/v1/posts/{post_id}/
@@ -149,7 +149,7 @@ python manage.py migrate
     #### Response
         status_code: 204
         
-* ##Получение списка всех комментариев
+* **Получение списка всех комментариев**
     #### Request
     ```
         GET /api/v1/posts/{post_id}/comments/
@@ -167,7 +167,7 @@ python manage.py migrate
             ...
         ]
         
-* ##Создание нового комментария
+* **Создание нового комментария**
     #### Request
     ```
         POST /api/v1/posts/{post_id}/comments/
@@ -183,7 +183,7 @@ python manage.py migrate
             "pub_date": "2019-08-24T14:15:22Z"
         }
 
-* ##Получение комментария по его id
+* **Получение комментария по его id**
     #### Request
     ```
         POST /api/v1/posts/{post_id}/comments/{comment_id}/
@@ -198,7 +198,7 @@ python manage.py migrate
             "pub_date": "2019-08-24T14:15:22Z"
         }
 
-* ##Обновление комментария по его id
+* **Обновление комментария по его id**
     #### Request
     ```
         PUT /api/v1/posts/{post_id}/comments/{comment_id}/
@@ -214,7 +214,7 @@ python manage.py migrate
             "pub_date": "2019-08-24T14:15:22Z"
         }
 
-* ##Частичное обновление комментария по его id
+* **Частичное обновление комментария по его id**
     #### Request
     ```
         PATCH /api/v1/posts/{post_id}/comments/{comment_id}/
@@ -230,7 +230,7 @@ python manage.py migrate
             "pub_date": "2019-08-24T14:15:22Z"
         }
 
-* ##Удаление комментария по его id
+* **Удаление комментария по его id**
     #### Request
     ```
         DELETE /api/v1/posts/{post_id}/comments/{comment_id}/
@@ -239,7 +239,7 @@ python manage.py migrate
     #### Response
         status_code: 204
 
-* ##Получение списка всех подписчиков
+* **Получение списка всех подписчиков**
     #### Request
     ```
         GET /api/v1/follow/?search={username_string}
@@ -255,7 +255,7 @@ python manage.py migrate
             ...
         ]
 
-* ##Создание подписки
+* **Создание подписки**
     #### Request
     ```
         POST /api/v1/follow/?user={username_string}
@@ -269,7 +269,7 @@ python manage.py migrate
             "following": "string"
         }
 
-* ##Получение списка всех групп
+* **Получение списка всех групп**
     #### Request
     ```
         GET /api/v1/follow/group/
@@ -284,7 +284,7 @@ python manage.py migrate
             ...
         ]
 
-* ##Создание новой группы
+* **Создание новой группы**
     #### Request
     ```
         POST /api/v1/follow/group/
