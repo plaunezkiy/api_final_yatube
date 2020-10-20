@@ -46,16 +46,16 @@ python manage.py migrate
           "access": "JRW-access-token",
         }
 
-  * **Обновление токена**
-    ### Request
-    ```
-      POST /api/v1/token/?username={username_string}&password={password_string}
-    ```
-    ### Response
-        {
-          "access": "JRW-access-token",
-          "refresh": "JRW-refresh-token"
-        }
+* **Обновление токена**
+### Request
+```
+  POST /api/v1/token/refresh/
+  form-data: {"refresh": "JRW-refresh-token"}
+```
+### Response
+    {
+      "access": "new-JRW-access-token"
+    }
   
   
   
