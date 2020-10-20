@@ -35,9 +35,9 @@ python manage.py migrate
 # Примеры использования
 
 * Получение токена авторизации
-
-  POST: localhost:8000/token {"username": "username_string", "password": "password_string"}
-  
+```
+  POST /api/v1/token/?username={username_string}&password={password_string}
+```
   Response:
     {
       "access": "JRW-access-token",
