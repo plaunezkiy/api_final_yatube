@@ -1,8 +1,7 @@
 from django.shortcuts import get_object_or_404
 from django_filters.rest_framework import DjangoFilterBackend
-from rest_framework import viewsets, status
+from rest_framework import viewsets, status, generics
 from rest_framework import filters
-from rest_framework.generics import ListCreateAPIView
 from rest_framework.permissions import IsAuthenticated, IsAuthenticatedOrReadOnly
 from rest_framework.response import Response
 
@@ -35,7 +34,7 @@ class CommentViewSet(viewsets.ModelViewSet):
         serializer.save(author=self.request.user)
 
 
-class FollowListCreateAPIView(ListCreateAPIView):
+class FollowViewSet(viewsets.ViewSetMixin, generics.ListCreateAPIView):
     queryset = Follow.objects.all()
     serializer_class = FollowSerializer
     permission_classes = [IsAuthenticatedOrReadOnly]
@@ -46,14 +45,7 @@ class FollowListCreateAPIView(ListCreateAPIView):
         serializer.save(user=self.request.user)
 
 
-class GroupListCreateAPIView(ListCreateAPIView):
+class GroupViewSet(viewsets.ViewSetMixin, generics.ListCreateAPIView):
     queryset = Group.objects.all()
     serializer_class = GroupSerializer
     permission_classes = [IsAuthenticatedOrReadOnly]
-
-    def post(self, request, *args, **kwargs):
-        serializer = GroupSerializer(data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
